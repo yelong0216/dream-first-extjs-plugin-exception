@@ -1,0 +1,12 @@
+<script type="text/javascript" src="${THIS_PROJECT_ROOT_PATH}/moduleServiceInterface/getModuleServiceInterfaceURL?serviceInterfaceNames=loginIndex"></script>
+<script type="text/javascript">
+if(top.location != self.location){
+	window.parent.postMessage({"type":"tokenLoseEfficacy"},"*");
+} else {
+	//Co.showError("您登录已超时，请重新登录！",function(){
+	//window.location = ModuleServiceInterface.login;
+	//window.location = "http://192.168.1.113:25000/v1.0/index/login/index";
+	window.location = ModuleServiceInterface.loginIndex;
+	//});
+}
+</script>
